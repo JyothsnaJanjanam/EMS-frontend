@@ -19,7 +19,7 @@ import LeaveList from './components/leave/LeaveList';
 import AddLeave from './components/leave/AddLeave';
 import Settings from './components/EmployeeDashboard/Settings';
 import LeaveTable from './components/leave/LeaveTable';
-import LeaveDetail from './components/leave/Leavedetail';
+import LeaveDetail from './components/leave/LeaveDetail';
 
 
 function App() {
