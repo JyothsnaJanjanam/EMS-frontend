@@ -1,0 +1,72 @@
+.login {
+  font-family: 'Poppins';
+  max-width: 500px;
+  min-width: 400px;
+  margin: 12px auto;
+  text-align: center;
+  margin-top: 100px;
+}
+.login h1 {
+  margin-bottom: 30px;
+}
+.login-container {
+  background-color: rgba(172, 172, 172, 0.3);
+  border: solid 1px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  box-shadow: 0 1px 12px rgba(0,0,0,.5);
+  padding: 20px 30px 20px;
+}
+.login-field label{
+  display: block;
+  text-align: left;
+  font-size: 23px;
+  margin-bottom: 0px;
+}
+.login-field {
+  margin: 0px 10px;
+  padding-top: 10px;
+  text-align: left;
+}
+.login-field input {
+  max-width: 500px;
+  width: 90%;
+  line-height: 3rem;
+  border-radius: 5px;
+  border: 2px;
+  outline: none;
+  padding-left: 10px;
+  font-size: 18px;
+}
+.login-field input::placeholder {
+  font-size: 18px;
+  color: rgb(4, 4, 4, 0.5);
+}
+.register-login-acc {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.register-login-acc span {
+  color: rgb(12, 12, 148);
+  cursor: pointer;
+}
+.login-container button {
+  height: 43px;
+  width: 120px;
+  border: none;
+  border-radius: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 30px;
+  background-color: blue;
+  color: white;
+  font-size: 19px;
+}
+.login-container button:active {
+  transform: scale(1.05);
+  transition: 0.6s;
+  background-color: darkblue;
+}
+.error-msg {
+  padding: 10px;
+  color: red;
+}

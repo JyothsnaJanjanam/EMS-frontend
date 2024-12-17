@@ -1,0 +1,49 @@
+.sal-table {
+  margin-top: 20px;
+}
+.sal-head-cont {
+  text-align: center;
+}
+.sal-head {
+  font-weight: bold;
+  margin-top: 20px;
+}
+.sal-inp-cont {
+  display: flex;
+  justify-content: end;
+  padding-right: 20px; 
+  padding-bottom: 10px; 
+}
+.sal-inp{
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  padding-right: 20px;
+  font-size: 15px;
+}
+.table {
+  width: 100%;
+  text-align: left;
+  color: gray;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.table-head-row {
+  text-transform: uppercase;
+  background-color: lightgray;
+  border: 1px solid gray;
+}
+.table-head {
+  color: black;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-right: 3px;
+}
+.table-data-row {
+  background-color: white;
+  border: 1px solid gray;
+}
+.table-data {
+  padding-left: 10px;
+  padding-right: 3px;
+}

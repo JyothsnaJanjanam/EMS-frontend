@@ -1,0 +1,60 @@
+.setting {
+  font-family: 'Poppins';
+  max-width: 500px;
+  min-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+.setting-head {
+  margin-bottom: 20px;
+}
+.setting-container {
+  background-color: rgba(172, 172, 172, 0.3);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  padding: 20px 30px 20px;
+}
+.setting-field label{
+  display: block;
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.setting-field {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.setting-field input {
+  max-width: 500px;
+  width: 90%;
+  line-height: 2.5rem;
+  border-radius: 5px;
+  border: 2px;
+  outline: none;
+  padding-left: 5px;
+  font-size: 18px;
+}
+.setting-field input::placeholder {
+  font-size: 16px;
+  color: rgb(4, 4, 4, 0.5);
+}
+.cp-button {
+  margin-top: 20px;
+  background-color: blue;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  padding: 10px 30px;
+  width: auto;
+  margin-bottom: 0;
+}
+.cp-button:hover {
+  background-color: rgb(0, 0, 185);
+  cursor: pointer;
+}
+.error-msg {
+  padding: 10px;
+  color: red;
+}

@@ -1,0 +1,19 @@
+.admin-container {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+  /* width: auto; */
+  /* height: auto; */
+}
+.admin-navbar {
+  display: flex;
+  flex-direction: column;
+  margin-left: 280px;
+  max-height: auto;
+  min-height: 100vh;
+  overflow: auto;
+}

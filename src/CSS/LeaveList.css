@@ -1,0 +1,50 @@
+.leave-container {
+  padding: 0px 20px;
+  height: auto;
+  text-align: center;
+  margin-top: 15px;
+}
+.leave-head {
+  font-size: bold;
+  font-size: 22px;
+}
+.leave-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+} 
+.leave-input {
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  font-size: 16px;
+}
+.leave-input::placeholder {
+  color: lightgray;
+  font-size: 15px;
+}
+.leave-link {
+  padding: 5px 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+.leave-table {
+  margin-top: 20px;
+}
+
+.emp-img {
+  display: block;
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+} 

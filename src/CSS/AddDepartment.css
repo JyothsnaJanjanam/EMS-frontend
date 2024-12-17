@@ -1,0 +1,65 @@
+.add-dep-container {
+  /* width: 25vw;
+  height: 60vh;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 5px; */
+  width: 25vw;
+  padding: 20px;
+  background-color: white;
+  margin: auto;
+  border-radius: 5px;
+}
+.add-head {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.add-name, .add-desc {
+  display: block;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.add-name-inp, .add-desc-inp {
+  margin-top: 5px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 5px;
+  padding-right: 95px;
+  width: 70%;
+  margin-right: 10px;
+  font-size: 16px;
+  font-family: 'Poppins';
+}
+.add-name-inp::placeholder, 
+.add-desc-inp::placeholder {
+  font-size: 15px;
+}
+/* .add-desc {
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
+} */
+.add-desc-inp {
+  height: 100px;
+}
+.add-butt {
+  text-align: center;
+  margin-top: 10px;
+  background-color: blue;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  width: 25vw;
+}
+.add-butt:hover {
+  background-color: rgb(0, 0, 185);
+  cursor: pointer;
+}

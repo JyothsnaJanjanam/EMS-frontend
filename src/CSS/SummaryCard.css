@@ -1,0 +1,36 @@
+.summary-container {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: white;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 15px 15px;
+  font-size: 25px;
+}
+.details {
+  /* display: flex;
+  flex-direction: column;
+  background-color: white; */
+  /* width: 250px; */
+  padding-left: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.details-text {
+  font-weight: 500px;
+}
+.details-number {
+  font-weight: bold;
+}
+
+
+.welcome-cont {
+  margin: 20px;
+}
+.welcome-name {
+  font-weight: bold;
+}
