@@ -13,7 +13,7 @@ const LeaveDetail = () => {
   useEffect(() => {
     const fetchLeave = async () => {
       try {
-        const response = await axios.get(`https://ems-backend-neon.vercel.app/api/leave/details/${id}`, {
+        const response = await axios.get(`http://localhost:7001/api/leave/details/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('auth-token')}`
           }
@@ -32,7 +32,7 @@ const LeaveDetail = () => {
 
   const changeStatus = async (id, status) => {
     try {
-      const response = await axios.put(`https://ems-backend-neon.vercel.app/api/leave/${id}`, {status}, {
+      const response = await axios.put(`http://localhost:7001/api/leave/${id}`, {status}, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('auth-token')}`
         }
@@ -53,7 +53,7 @@ const LeaveDetail = () => {
         <h2 className='view-detail-head'>Leave Details</h2>
         <div className='view-detail-cont'>
           <div>
-            <img src={`https://ems-backend-neon.vercel.app/${leave.employeeId.userId.profileImage}`} className='view-detail-img' />
+            <img src={`http://localhost:7001/${leave.employeeId.userId.profileImage}`} className='view-detail-img' />
           </div>
           <div>
 

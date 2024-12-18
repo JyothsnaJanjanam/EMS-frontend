@@ -12,7 +12,7 @@ const LeaveList = () => {
 
   const fetchLeaves = async () => {
     try {
-      const response = await axios.get(`https://ems-backend-neon.vercel.app/api/leave/${id}/${user.role}`, {
+      const response = await axios.get(`http://localhost:7001/api/leave/${id}/${user.role}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('auth-token')}`
         }
@@ -22,7 +22,7 @@ const LeaveList = () => {
         setLeaves(response.data.leaves)
       }
     } catch (error) {
-      // console.log(error)
+      console.log(error)
       if(error.response && !error.response.data.success) {
         alert(error.message)
       }

@@ -27,7 +27,7 @@ const Settings = () => {
       setError('Password not matched')
     } else {
       try {
-        const response = await axios.put('https://ems-backend-neon.vercel.app/api/setting/change-password', setting, {
+        const response = await axios.put('http://localhost:7001/api/setting/change-password', setting, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('auth-token')}`,
           }

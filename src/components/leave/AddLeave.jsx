@@ -21,7 +21,7 @@ const AddLeave = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()    
     try {
-      const response = await axios.post(`https://ems-backend-neon.vercel.app/api/leave/add`, leave, {
+      const response = await axios.post(`http://localhost:7001/api/leave/add`, leave, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('auth-token')}`
         }

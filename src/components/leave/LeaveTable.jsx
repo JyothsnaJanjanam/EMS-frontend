@@ -11,11 +11,13 @@ const LeaveTable = () => {
 
   const fetchLeaves = async () => {
     try {
-      const response = await axios.get('https://ems-backend-neon.vercel.app/api/leave', {
+      const response = await axios.get('http://localhost:7001/api/leave', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('auth-token')}`,
         },
       });
+      console.log(response.data)
+
       if (response.data.success) {
         let sno = 1;
         const data = await response.data.leaves.map((leave) => ({
@@ -29,6 +31,7 @@ const LeaveTable = () => {
           status: leave.status,
           action: (<LeaveButtons Id={leave._id} />),
         }));
+        console.log(data)
         setLeaves(data);
         setFilteredLeaves(data)
       }

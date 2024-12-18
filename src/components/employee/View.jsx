@@ -11,7 +11,7 @@ const View = () => {
   useEffect(() => {
     const fetchEmployee = async () => {
       try {
-        const response = await axios.get(`https://ems-backend-neon.vercel.app/api/employee/${id}`, {
+        const response = await axios.get(`http://localhost:7001/api/employee/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('auth-token')}`
           }
@@ -34,7 +34,7 @@ const View = () => {
         <h2 className='view-head'>Employee Details</h2>
         <div className='view-details'>
           <div>
-            <img src={`https://ems-backend-neon.vercel.app/${employee.userId.profileImage}`} className='view-img' />
+            <img src={`http://localhost:7001/${employee.userId.profileImage}`} className='view-img' />
           </div>
           <div>
 
