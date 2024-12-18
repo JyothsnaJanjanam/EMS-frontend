@@ -31,7 +31,7 @@ const Edit = () => {
   useEffect(() => {
     const fetchEmployee = async () => {
       try {
-        const response = await axios.get(`https://ems-backend-one.vercel.app/api/employee/${id}`, {
+        const response = await axios.get(`https://ems-backend-neon.vercel.app/api/employee/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('auth-token')}`
           }
@@ -70,7 +70,7 @@ const Edit = () => {
     e.preventDefault()
 
     try {
-      const response = await axios.put(`https://ems-backend-one.vercel.app/api/employee/${id}`, employee, {
+      const response = await axios.put(`https://ems-backend-neon.vercel.app/api/employee/${id}`, employee, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('auth-token')}`
         }

@@ -12,7 +12,7 @@ const LeaveList = () => {
 
   const fetchLeaves = async () => {
     try {
-      const response = await axios.get(`https://ems-backend-one.vercel.app/api/leave/${id}/${user.role}`, {
+      const response = await axios.get(`https://ems-backend-neon.vercel.app/api/leave/${id}/${user.role}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('auth-token')}`
         }

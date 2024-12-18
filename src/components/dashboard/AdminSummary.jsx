@@ -11,7 +11,7 @@ const AdminSummary = () => {
   useEffect(() => {
     const fetchSummary = async () => {
       try {
-        const summary = await axios.get('https://ems-backend-one.vercel.app/api/dashboard/summary', {
+        const summary = await axios.get('https://ems-backend-neon.vercel.app/api/dashboard/summary', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('auth-token')}`
           }

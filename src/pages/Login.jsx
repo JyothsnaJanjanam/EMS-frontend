@@ -20,7 +20,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('https://ems-backend-one.vercel.app/api/auth/login', formData)
+      const response = await axios.post('https://ems-backend-neon.vercel.app/api/auth/login', formData)
       if(response.data.success) {
         login(response.data.user)
         localStorage.setItem('auth-token', response.data.token);
@@ -31,6 +31,7 @@ const Login = () => {
         }
       }
     } catch (error) {
+      console.log(error)
       if(error.response && !error.response.data.success) {
         setError(error.response.data.message)
       } else {

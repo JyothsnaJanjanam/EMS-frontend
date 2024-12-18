@@ -13,7 +13,7 @@ export function UserContextProvider({children}) {
         const token = localStorage.getItem('auth-token')
 
         if (token) {                              
-          const response = await axios.get('https://ems-backend-one.vercel.app/api/auth/verify', {
+          const response = await axios.get('https://ems-backend-neon.vercel.app/api/auth/verify', {
             headers: {
               Authorization: `Bearer ${token}`,
             }
