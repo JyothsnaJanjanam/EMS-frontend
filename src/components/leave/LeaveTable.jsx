@@ -16,7 +16,7 @@ const LeaveTable = () => {
           Authorization: `Bearer ${localStorage.getItem('auth-token')}`,
         },
       });
-      console.log(response.data)
+      // console.log(response.data)
 
       if (response.data.success) {
         let sno = 1;
