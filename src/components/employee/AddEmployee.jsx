@@ -41,6 +41,7 @@ const AddEmployee = () => {
           'Authorization': `Bearer ${localStorage.getItem('auth-token')}`
         }
       })
+      
       console.log(response)
       if(response.data.success) {
         navigate('/admin/employees')
