@@ -20,7 +20,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('https://ems-backend-fawn.vercel.app/api/auth/login', formData)
+      const response = await axios.post('http://localhost:7001/api/auth/login', formData)
       if(response.data.success) {
         login(response.data.user)
         localStorage.setItem('auth-token', response.data.token);

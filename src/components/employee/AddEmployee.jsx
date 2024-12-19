@@ -36,13 +36,12 @@ const AddEmployee = () => {
     })
 
     try {
-      const response = await axios.post('https://ems-backend-fawn.vercel.app/api/employee/add', formDataObj, {
+      const response = await axios.post('http://localhost:7001/api/employee/add', formDataObj, {
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('auth-token')}`
+          'Authorization': `Bearer ${localStorage.getItem('auth-token')}`,
         }
-      })
-      
-      console.log(response)
+      })      
+      // console.log(response)
       if(response.data.success) {
         navigate('/admin/employees')
       }
