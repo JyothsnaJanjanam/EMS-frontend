@@ -36,7 +36,11 @@ const AddEmployee = () => {
     })
 
     try {
-      console.log('fdo', formDataObj)
+      // console.log('fdo', formDataObj)
+      console.log('FormData contents:');
+    for (let pair of formDataObj.entries()) {
+      console.log(pair[0] + ':', pair[1]);
+    }
       const response = await axios.post('https://ems-backend-fawn.vercel.app/api/employee/add', formDataObj, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('auth-token')}`,
