@@ -19,14 +19,24 @@ const AddEmployee = () => {
     getDepartments();
   }, [])
 
+  // const handleChange = (e) => {
+  //   const {name, value, files} = e.target
+  //   if(name === 'image') {
+  //     setFormData((prevData) => ({...prevData, [name]: files[0]}))
+  //   } else {
+  //     setFormData((prevData) => ({...prevData, [name]: value}))
+  //   }
+  // }
+
   const handleChange = (e) => {
-    const {name, value, files} = e.target
-    if(name === 'image') {
-      setFormData((prevData) => ({...prevData, [name]: files[0]}))
-    } else {
-      setFormData((prevData) => ({...prevData, [name]: value}))
-    }
-  }
+  const { name, value, files } = e.target;
+  const updatedValue = name === 'image' ? files[0] : value;
+  setFormData((prevData) => {
+    const updatedFormData = { ...prevData, [name]: updatedValue };
+    console.log("Updated formData:", updatedFormData);
+    return updatedFormData;
+  });
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -34,13 +44,10 @@ const AddEmployee = () => {
     Object.keys(formData).forEach((key) => {
       formDataObj.append(key, formData[key])
     })
+      console.log("Populated FormData:", Array.from(formDataObj.entries()));
 
     try {
-      // console.log('fdo', formDataObj)
-      console.log('FormData contents:');
-    for (let pair of formDataObj.entries()) {
-      console.log(pair[0] + ':', pair[1]);
-    }
+      console.log(formDataObj)
       const response = await axios.post('https://ems-backend-fawn.vercel.app/api/employee/add', formDataObj, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('auth-token')}`,
