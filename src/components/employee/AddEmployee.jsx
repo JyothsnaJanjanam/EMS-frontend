@@ -19,24 +19,25 @@ const AddEmployee = () => {
     getDepartments();
   }, [])
 
-  // const handleChange = (e) => {
-  //   const {name, value, files} = e.target
-  //   if(name === 'image') {
-  //     setFormData((prevData) => ({...prevData, [name]: files[0]}))
-  //   } else {
-  //     setFormData((prevData) => ({...prevData, [name]: value}))
-  //   }
-  // }
-
   const handleChange = (e) => {
-  const { name, value, files } = e.target;
-  const updatedValue = name === 'image' ? files[0] : value;
-  setFormData((prevData) => {
-    const updatedFormData = { ...prevData, [name]: updatedValue };
-    console.log("Updated formData:", updatedFormData);
-    return updatedFormData;
-  });
-};
+    const {name, value, files} = e.target
+    if(name === 'image') {
+      setFormData((prevData) => ({...prevData, [name]: files[0]}))
+    } else {
+      setFormData((prevData) => ({...prevData, [name]: value}))
+    }
+    return formData
+  }
+
+//   const handleChange = (e) => {
+//   const { name, value, files } = e.target;
+//   const updatedValue = name === 'image' ? files[0] : value;
+//   setFormData((prevData) => {
+//     const updatedFormData = { ...prevData, [name]: updatedValue };
+//     console.log("Updated formData:", updatedFormData);
+//     return updatedFormData;
+//   });
+// };
 
   const handleSubmit = async (e) => {
     e.preventDefault()
