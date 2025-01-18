@@ -42,7 +42,11 @@ const AddEmployee = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const formDataObj = new FormData()
+      console.log('Current formData:', formData);
+
     Object.keys(formData).forEach((key) => {
+        console.log(`Appending ${key}:`, formData[key]);
+
       formDataObj.append(key, formData[key])
     })
       console.log('Populated FormData: ', Array.from(formDataObj.entries()));
