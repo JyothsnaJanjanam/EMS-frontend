@@ -24,7 +24,7 @@ const AddEmployee = () => {
     if(name === 'image') {
       setFormData((prevData) => ({...prevData, [name]: files[0]}))
     } else {
-      setFormData((prevData) => ({...prevDat a, [name]: value}))
+      setFormData((prevData) => ({...prevData, [name]: value}))
     }
       console.log('Updated formData:', formData); // This might show the previous state due to async nature.
   }
