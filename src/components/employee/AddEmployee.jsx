@@ -45,11 +45,11 @@ const AddEmployee = () => {
     Object.keys(formData).forEach((key) => {
       formDataObj.append(key, formData[key])
     })
-      console.log("Populated FormData:", Array.from(formDataObj.entries()));
+      const PopulatedFormData = Array.from(formDataObj.entries()));
 
     try {
       console.log(formDataObj)
-      const response = await axios.post('https://ems-backend-fawn.vercel.app/api/employee/add', formDataObj, {
+      const response = await axios.post('https://ems-backend-fawn.vercel.app/api/employee/add', PopulatedFormData, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('auth-token')}`,
         }
