@@ -24,9 +24,9 @@ const AddEmployee = () => {
     if(name === 'image') {
       setFormData((prevData) => ({...prevData, [name]: files[0]}))
     } else {
-      setFormData((prevData) => ({...prevData, [name]: value}))
+      setFormData((prevData) => ({...prevDat a, [name]: value}))
     }
-    return formData
+      console.log('Updated formData:', formData); // This might show the previous state due to async nature.
   }
 
 //   const handleChange = (e) => {
@@ -45,7 +45,7 @@ const AddEmployee = () => {
     Object.keys(formData).forEach((key) => {
       formDataObj.append(key, formData[key])
     })
-      console.log('Populated FormData: ',   Array.from(formDataObj.entries()));
+      console.log('Populated FormData: ', Array.from(formDataObj.entries()));
 
     try {
       console.log(formDataObj)
