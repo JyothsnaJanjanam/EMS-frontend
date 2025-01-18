@@ -26,27 +26,12 @@ const AddEmployee = () => {
     } else {
       setFormData((prevData) => ({...prevData, [name]: value}))
     }
-      console.log('Updated formData:', formData); // This might show the previous state due to async nature.
   }
-
-//   const handleChange = (e) => {
-//   const { name, value, files } = e.target;
-//   const updatedValue = name === 'image' ? files[0] : value;
-//   setFormData((prevData) => {
-//     const updatedFormData = { ...prevData, [name]: updatedValue };
-//     console.log("Updated formData:", updatedFormData);
-//     return updatedFormData;
-//   });
-// };
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     const formDataObj = new FormData()
-      console.log('Current formData:', formData);
-
     Object.keys(formData).forEach((key) => {
-        console.log(`Appending ${key}:`, formData[key]);
-
       formDataObj.append(key, formData[key])
     })
       console.log('Populated FormData: ', Array.from(formDataObj.entries()));
